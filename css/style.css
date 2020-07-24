@@ -127,6 +127,9 @@ svg rect {
   svg rect {
     stroke-dasharray: 40, 300;
   }
+  .logo {
+    width: 140px;
+  }
 }
 
 .header {
@@ -137,6 +140,12 @@ svg rect {
   background-size: auto auto;
   background-repeat: no-repeat;
   background-position: left 54%;
+}
+
+@media (max-width: 1141px) {
+  .header {
+    background-size: cover;
+  }
 }
 
 .navbar {
@@ -299,6 +308,10 @@ svg rect {
   }
   .sidebar-hide-btn {
     right: 0;
+  }
+  .sidebar-icon_big {
+    height: 180px;
+    width: 180px;
   }
 }
 /*# sourceMappingURL=style.css.map */
