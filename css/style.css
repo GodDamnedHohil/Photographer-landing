@@ -1,38 +1,304 @@
 *, *::before, *::after {
   box-sizing: border-box;
+  z-index: 1;
+}
+
+@font-face {
+  font-family: 'Roboto Thin';
+  src: url("../fonts/Roboto-Thin.eot");
+  src: url("../fonts/Roboto-Thin.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Thin.woff") format("woff"), url("../fonts/Roboto-Thin.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto Regular';
-  src: url("..fonts/Roboto-Regular.eot");
-  src: url("..fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("..fonts/Roboto-Regular.woff") format("woff"), url("..fonts/Roboto-Regular.ttf") format("truetype");
+  src: url("../fonts/Roboto-Regular.eot");
+  src: url("../fonts/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Regular.woff") format("woff"), url("../fonts/Roboto-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto Italic';
-  src: url("..fonts/Roboto-Italic.eot");
-  src: url("..fonts/Roboto-Italic.eot?#iefix") format("embedded-opentype"), url("..fonts/Roboto-Italic.woff") format("woff"), url("..fonts/Roboto-Italic.ttf") format("truetype");
+  src: url("../fonts/Roboto-Italic.eot");
+  src: url("../fonts/Roboto-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Italic.woff") format("woff"), url("../fonts/Roboto-Italic.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Roboto Medium';
-  src: url("..fonts/Roboto-Medium.eot");
-  src: url("..fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("..fonts/Roboto-Medium.woff") format("woff"), url("..fonts/Roboto-Medium.ttf") format("truetype");
+  src: url("../fonts/Roboto-Medium.eot");
+  src: url("../fonts/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/Roboto-Medium.woff") format("woff"), url("../fonts/Roboto-Medium.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-.container {
-  max-width: 1170px;
-  padding: 0 15px;
+h1 {
+  margin: 0;
 }
 
-body {
+svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+svg rect {
+  stroke: #22222B;
+  stroke-width: 1;
+  transition: 0.8s;
+  stroke-dasharray: 50, 600;
+  stroke-dashoffset: 20;
+}
+
+.container {
+  max-width: 1170px;
+}
+
+@media (max-width: 1170px) {
+  .container {
+    padding: 0 15px;
+  }
+}
+
+.logo {
+  width: 188px;
+  height: 43px;
+}
+
+.section-title {
   font-family: 'Roboto Regular', sans-serif;
-  font-size: 40px;
+  font-size: 36px;
+  color: black;
+  text-align: center;
+}
+
+.section-title_big {
+  font-family: 'Roboto Medium', sans-serif;
+  font-size: 48px;
+  color: black;
+}
+
+.section-title_extra-bold {
+  font-family: 'Roboto Medium', sans-serif;
+  font-size: 60px;
+  color: #000000;
+}
+
+.section-title_extra {
+  font-family: 'Roboto Thin', sans-serif;
+  font-size: 60px;
+  color: black;
+}
+
+.section-title__border {
+  width: inherit;
+  height: 100%;
+}
+
+.link {
+  font-family: 'Roboto Regular', sans-serif;
+  font-size: 16px;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  color: #22222B;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hidden {
+  display: none;
+}
+
+@media screen and (max-width: 800px) {
+  svg rect {
+    stroke-dasharray: 50, 506;
+  }
+  .section-title_extra, .section-title_extra-bold {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .section-title_extra, .section-title_extra-bold {
+    font-size: 30px;
+  }
+  svg rect {
+    stroke-dasharray: 40, 300;
+  }
+}
+
+.header {
+  position: relative;
+  height: 960px;
+  width: 100%;
+  background-image: url("../img/hero-bg.jpeg");
+  background-size: auto auto;
+  background-repeat: no-repeat;
+  background-position: left 54%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  width: 531px;
+  padding-bottom: 4px;
+}
+
+@media (max-width: 1140px) {
+  .navbar {
+    display: none;
+  }
+}
+
+.navbar__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  height: 80px;
+  width: 100%;
+  margin: auto;
+}
+
+.navbar__link {
+  padding-bottom: 8px;
+  color: #000000;
+  transition: .4s;
+}
+
+.navbar__link:hover {
+  border-bottom: 1px solid #22222B;
+}
+
+.menu-icon {
+  height: 30px;
+  widht: 30px;
+  transition: 1s;
+}
+
+@media (min-width: 1141px) {
+  .menu-icon {
+    display: none !important;
+  }
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 880px;
+  width: 100%;
+  margin: auto;
+}
+
+.hero-title__wrap {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  width: 564px;
+  height: 86px;
+  margin-top: -56px;
+}
+
+@media (max-width: 610px) {
+  .hero-title__wrap {
+    width: inherit;
+  }
+}
+
+.sidebar {
+  position: absolute;
+  width: 300px;
+  left: 0;
+  top: 0;
+  height: 100%;
+  padding: 0 15px;
+  background-color: #ffffff;
+  transition: .5s;
+  z-index: 2;
+}
+
+@media (min-width: 1141px) {
+  .sidebar {
+    transform: translateX(-120%) !important;
+  }
+}
+
+.sidebar__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar-hide-btn {
+  position: absolute;
+  top: 10px;
+  right: -50px;
+  width: 30px;
+  height: 30px;
+  background-image: url("../img/move.svg");
+  background-size: contain;
+  background-position: center;
+}
+
+.sidebar-icon_big {
+  width: 240px;
+  height: 240px;
+  margin: 0 auto;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.sidebar-nav__link {
+  font-size: 20px;
+  padding: 3px 7px;
+  margin-bottom: 8px;
+  border-radius: 5px;
+}
+
+.sidebar-nav__link:hover {
+  background-color: rgba(34, 34, 43, 0.05);
+}
+
+.sidebar-nav__link:active {
+  background-color: rgba(34, 34, 43, 0.1);
+}
+
+@media (max-width: 800px) {
+  .header {
+    height: 100vh;
+  }
+  .hero {
+    height: calc( 100vh - 80px);
+  }
+  .hero-title__wrap {
+    width: 470px;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-title__wrap {
+    width: 290px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 400px) {
+  .sidebar {
+    width: 100%;
+  }
+  .sidebar-hide-btn {
+    right: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

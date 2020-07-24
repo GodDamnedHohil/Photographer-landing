@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="img/icon-3.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/vivify.min.css" type="text/css"/>
   <link rel="stylesheet" href="css/style.css">
   <title>My portfolio</title>
 </head>
@@ -11,11 +13,67 @@
   <section class="header-section">
     <header>
       <div class="header">
-        <div class="container header__inner">
-          djsds
+        <!-- navbar -->
+        <div class="container navbar__container">
+          <img class="logo navbar-logo" src="img/Logo.svg">
+          <!-- ^ logo ^ -->
+          <nav>
+            <div class="navbar">
+              <!-- links -->
+              <a href="#" class="link navbar__link">Home</a>
+              <a href="#" class="link navbar__link">About</a>
+              <a href="#" class="link navbar__link">Services</a>
+              <a href="#" class="link navbar__link">Portfolio</a>
+              <a href="#" class="link navbar__link">Testimonials</a>
+              <a href="#" class="link navbar__link">News</a>
+              <a href="#" class="link navbar__link">Contact</a>
+            </div>
+            <img class="menu-icon" src="img/menu.svg" alt="">
+          </nav>
         </div>
+        <!-- ^ navbar ^ -->
+        <!-- sidebar -->
+          <aside>
+            <div class="sidebar">
+              <div class="sidebar__inner">
+                <div class="sidebar-hide-btn"></div>
+                <img src="img/Menu-icon.png" alt="" class="sidebar-icon_big">
+                <!-- ^ icon ^ -->
+                <div class="sidebar-title__wrap">
+                  <h3 class="section-title sidebar-title">Menu</h3>
+                  <!-- ^ title ^ -->
+                </div>
+                <nav>
+                  <div class="sidebar-nav">
+                    <!-- links -->
+                    <a hr ef="#" class="link sidebar-nav__link">Home</a>
+                    <a href="#" class="link sidebar-nav__link">About</a>
+                    <a href="#" class="link sidebar-nav__link">Services</a>
+                    <a href="#" class="link sidebar-nav__link">Portfolio</a>
+                    <a href="#" class="link sidebar-nav__link">Testimonials</a>
+                    <a href="#" class="link sidebar-nav__link">News</a>
+                    <a href="#" class="link sidebar-nav__link">Contact</a>
+                  </div>
+                </nav>
+              </div>
+            </div>
+          </aside>
+        <!-- ^ sidebar ^ -->
+        <!-- hero -->
+        <div class="container hero">
+          <div class="hero-title__wrap">
+            <h1 class="section-title_extra">I Am <span class="section-title_extra-bold">Photographer</span></h1>
+            <!-- ^ title ^ -->
+            <svg class="section-title__border" xmlns="http://www.w3.org/2000/svg">
+              <rect class="section-title__border" x='0' y='0' fill='none'/>
+            </svg>
+            <!-- border-svg -->
+          </div>
+        </div>
+        <!-- ^ hero ^ -->
       </div>
     </header>
   </section>
+  <script src="js/main.js"></script>
 </body>
 </html>

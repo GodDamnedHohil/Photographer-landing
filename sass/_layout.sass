@@ -1,0 +1,75 @@
+$black: #22222B
+$grey: #7F7F82
+
+h1
+  margin: 0
+
+svg 
+  position: absolute
+  top: 0
+  left: 0
+
+svg rect 
+  stroke: $black
+  stroke-width: 1
+  transition: 0.8s
+  stroke-dasharray: 50, 600
+  stroke-dashoffset: 20
+
+
+.container
+  max-width: 1170px
+  @media  ( max-width: 1170px )
+    padding: 0 15px
+  
+  
+.logo
+  width: 188px
+  height: 43px
+
+.section-title
+  +regular
+  font-size: 36px
+  color: black
+  text-align: center
+  &_big
+    +medium
+    font-size: 48px
+    color: black
+  &_extra-bold
+    +medium
+    font-size: 60px
+    color: #000000
+  &_extra
+    +light
+    font-size: 60px
+    color: black
+  &__border
+    width: inherit
+    height: 100%
+ 
+  
+.link
+  +regular
+  font-size: 16px
+  text-decoration: none
+  border-bottom: 1px solid transparent
+  color: $black
+  -webkit-tap-highlight-color: transparent
+
+.hidden
+  display: none
+
+@media screen and ( max-width: 800px )
+  svg rect 
+    stroke-dasharray: 50, 506
+  .section-title
+    &_extra, &_extra-bold
+      font-size: 48px
+
+@media screen and ( max-width: 500px )
+  .section-title
+    &_extra, &_extra-bold
+      font-size: 30px
+  svg rect 
+    stroke-dasharray: 40, 300
