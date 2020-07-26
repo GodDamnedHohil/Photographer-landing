@@ -154,14 +154,8 @@ svg rect {
   transition: 1s;
 }
 
-@media (max-width: 1141px) {
-  .header {
-    background-size: cover;
-  }
-}
-
 .header_sec {
-  background-image: url("../img/hero-bg-2.jpg");
+  background-image: url("../img/hero-bg-2.jpeg");
   background-position: center;
 }
 
