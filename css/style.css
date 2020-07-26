@@ -154,6 +154,12 @@ svg rect {
   transition: 1s;
 }
 
+@media (max-width: 1140px) {
+  .header {
+    transition: .5s;
+  }
+}
+
 .header_sec {
   background-image: url("../img/hero-bg-2.jpeg");
   background-position: center;
