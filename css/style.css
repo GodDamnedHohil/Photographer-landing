@@ -1,7 +1,7 @@
 *, *::before, *::after {
   box-sizing: border-box;
   z-index: 1;
-  -webkit-tap-highlight-color: rgba(127, 127, 130, 0.2);
+  -webkit-tap-highlight-color: rgba(127, 127, 130, 0.1);
 }
 
 @font-face {
@@ -301,7 +301,6 @@ svg rect {
   flex-direction: column;
   width: 100%;
   height: 100%;
-  padding-top: 30px;
 }
 
 .sidebar-hide-btn {
@@ -309,10 +308,11 @@ svg rect {
   top: 10px;
   right: -50px;
   width: 30px;
-  height: 30px;
+  height: 40px;
   background-image: url("../img/move.svg");
   background-size: contain;
   background-position: center;
+  background-repeat: no-repeat;
   cursor: pointer;
 }
 
