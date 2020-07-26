@@ -1,5 +1,6 @@
 document.addEventListener('DOMContentLoaded', function(){
 
+  const header = document.querySelector('.header');
   const navbar = document.querySelector('.navbar');
   const navbarLogo = document.querySelector('.navbar-logo');
   const menuBtn = document.querySelector('.menu-icon')
@@ -9,6 +10,10 @@ document.addEventListener('DOMContentLoaded', function(){
   const sideNav = document.querySelector('.sidebar-nav');
   const sideTitle = document.querySelector('.sidebar-title');
   const hero = document.querySelector('.hero');
+  const heroTitle = document.querySelector('#hero-title');
+  const sliderBtn = document.querySelector('.slider-btn');
+  const btnCircleTop = document.querySelector('.circle_top');
+  const btnCircleBottom = document.querySelector('.circle_bottom');
 
   menuBtn.addEventListener('click', function() {
     sidebarIconBig.classList.toggle('driveInTop');
@@ -58,4 +63,21 @@ document.addEventListener('DOMContentLoaded', function(){
     }
   }
 
+  sliderBtn.addEventListener('click', function() {
+    if(btnCircleTop.classList.contains('circle_big')) {
+      btnCircleTop.classList.remove('circle_big');
+      btnCircleTop.classList.toggle('circle_small');
+      btnCircleBottom.classList.toggle('circle_big');
+      btnCircleBottom.classList.remove('circle_small');
+      heroTitle.innerText = 'Designer';
+      header.classList.add('header_sec')
+    } else {
+      btnCircleBottom.classList.remove('circle_big');
+      btnCircleBottom.classList.toggle('circle_small');
+      btnCircleTop.classList.toggle('circle_big');
+      btnCircleTop.classList.remove('circle_small');
+      heroTitle.innerText = 'Photographer';
+      header.classList.remove('header_sec')
+    }
+  })
 })

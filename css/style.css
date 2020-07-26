@@ -150,14 +150,20 @@ svg rect {
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
-  background-position: left 54%;
+  background-position: left 46%;
   overflow: hidden;
+  transition: 1s;
 }
 
 @media (max-width: 1141px) {
   .header {
     background-size: cover;
   }
+}
+
+.header_sec {
+  background-image: url("../img/hero-bg-2.jpg");
+  background-position: center;
 }
 
 .navbar {
@@ -278,7 +284,6 @@ svg rect {
 
 .sidebar {
   position: fixed;
-  overflow-y: scroll;
   width: 300px;
   left: 0;
   top: 0;
@@ -344,7 +349,50 @@ svg rect {
 }
 
 .sidebar-nav__link:hover {
-  border-bottom: 1px solid #7f7f82;
+  border-bottom: 1px solid #7f7f8281;
+}
+
+.slider-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 46px;
+  width: 27px;
+  border: 1px solid #22222B;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: 1s;
+}
+
+.slider-btn_white {
+  border: 1px solid #fff;
+}
+
+.slider-btn__wrap {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 34px;
+  height: 60px;
+  width: 100%;
+}
+
+.circle {
+  margin-top: 10px;
+  border-radius: 50%;
+  transition: .4s;
+}
+
+.circle_big {
+  width: 7px;
+  height: 7px;
+  border: 1px solid #22222B;
+}
+
+.circle_small {
+  width: 4px;
+  height: 4px;
+  border: 1px solid #7f7f8281;
 }
 
 @media (max-width: 800px) {
