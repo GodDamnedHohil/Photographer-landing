@@ -148,7 +148,6 @@ svg rect {
   width: 100%;
   background-image: url("../img/hero-bg.jpeg");
   background-size: cover;
-  background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: left 46%;
   overflow: hidden;
