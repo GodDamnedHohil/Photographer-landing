@@ -1,5 +1,5 @@
 $black: #22222B
-$grey: #7F7F82
+$grey: rgb(127, 127, 130)
 
 h1
   margin: 0
@@ -56,7 +56,9 @@ svg rect
   border-bottom: 1px solid transparent
   color: $black
   -webkit-tap-highlight-color: transparent
-
+  @media ( max-width: 1140px )
+    font-size: 14px
+    
 .hidden
   display: none
 
@@ -64,6 +66,7 @@ svg rect
   svg rect 
     stroke-dasharray: 50, 506
   .section-title
+    font-size: 30px
     &_extra, &_extra-bold
       font-size: 48px
 
