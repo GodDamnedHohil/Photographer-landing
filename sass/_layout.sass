@@ -1,5 +1,6 @@
 $black: #22222B
-$grey: #7f7f8281
+$grey: #7F7F82
+$greySec: #FAF9FE
 
 h1
   margin: 0
@@ -47,8 +48,22 @@ svg rect
   &__border
     width: inherit
     height: 100%
- 
-  
+  @media screen and ( max-width: 1140px )
+    &_big
+      font-size: 40px
+
+.description
+  +regular  
+  color: $grey
+  line-height: 1.6
+  &_big
+    font-size: 16px
+  &_small
+    font-size: 14px
+  @media screen and ( max-width: 1140px )
+    &_big
+      font-size: 14px
+
 .link
   +regular
   font-size: 16px
@@ -58,9 +73,15 @@ svg rect
   -webkit-tap-highlight-color: transparent
   @media ( max-width: 1140px )
     font-size: 14px
-    
+
+.label
+  +medium
+  font-size: 16px    
+
 .hidden
   display: none
+
+
 
 @media screen and ( max-width: 800px )
   svg rect 

@@ -1,0 +1,184 @@
+.about
+  height: 830px
+  width: 100%
+  &__inner
+    display: grid
+    grid-template-rows: repeat(7, 1fr)
+    grid-template-columns: 1fr 1fr
+    width: 100%
+    height: 100%
+    margin: 0 auto
+  &__block
+    &_left
+      grid-row: 2/7
+      grid-column: 1/2
+      padding: 10px 0
+    &_right
+      display: flex
+      flex-direction: column
+      overflow-x: hidden
+      grid-template-columns: 1fr
+      grid-template-rows: 2fr
+      grid-column: 2/3
+      grid-row: 3/7
+      margin-left: 51px
+  &-image
+    position: absolute
+    width: 376px
+    height: 465px
+    &__wrap
+      position: relative
+      width: 100%
+      height: 100%
+    &__label
+      display: inline-block
+      position: absolute
+      bottom: 59px
+      left: 14px
+      writing-mode: tb-rl
+      +medium 
+      font-size: 16px
+      color: #000000
+      word-spacing: -2px
+      letter-spacing: 2px
+      transform: rotate(180deg)
+      &::after
+        position: absolute
+        content: ''
+        width: 1px
+        height: 45px
+        top: 105px
+        left: 8px
+        background-color: #000000
+    &_back
+      top: 0
+      left: 0
+      background-image: url('../img/workplace.jpeg')
+      background-size: auto auto
+      background-position: 87% 4%
+      opacity: .7
+    &_front
+      bottom: 0
+      right: 0
+      background-image: url('../img/photographer.jpeg')
+      background-size: cover
+      background-position: left 73%
+  &-title
+    margin-bottom: 0
+  &-description
+    max-width: 530px
+    margin-bottom: 47px
+
+.progress
+  position: relative
+  height: 40px
+  &:nth-child(2) .progress__line
+    &::after
+      position: absolute
+      content: ''
+      top: 0
+      right: 0
+      height: 2px
+      width: 35%
+      background-color: #f2f2f2
+  &:nth-child(3) .progress__line
+    &::after
+      position: absolute
+      content: ''
+      top: 0
+      right: 0
+      height: 2px
+      width: 20%
+      background-color: #f2f2f2
+    
+  &__container
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    height: 185px
+  &__line
+    position: absolute
+    right: 0
+    top: 0
+    width: 100%
+    height: 2px
+    background-color: #000000
+  &__circle
+    position: absolute
+    width: 12px
+    height: 12px
+    background-color: #000000
+    border-radius: 50%
+    top: -5px
+    left: -6px
+  &__number
+    position: absolute
+    bottom: 0
+    right: 0
+  &__label
+    position: absolute
+    bottom: 0
+    left: 0
+
+
+@media ( max-width: 1140px )
+  .about
+    height: 650px
+    &__inner
+      grid-template-columns: repeat(9, 1fr)
+      grid-gap: 40px
+    &-image
+      width: 213px
+      height: 265px
+    &__block
+      &_right
+        grid-row: 2/7
+        grid-column: 5/9
+        margin: 0
+      &_left
+        padding: 0
+        grid-column: 2/5
+
+@media ( max-width: 890px )
+  .about
+    &__block
+      &_right
+        grid-row: 2/7
+        grid-column: 5/10
+        margin: 0
+      &_left
+        padding: 0
+        grid-column: 1/5
+  
+@media ( max-width: 690px )
+  .about
+    height: 1000px
+    padding-top: 50px
+    &__inner
+      justify-self: center
+      grid-template-columns: 1fr
+      grid-template-rows: 1fr 1fr
+      grid-gap: 0
+    &-image
+      width: 270px
+      height: 334px
+    &__block
+      &_right
+        grid-row: 2/3
+        grid-column: 1/2
+        align-self: center
+      &_left
+        width: 400px
+        grid-row: 1/2
+        grid-column: 1/2
+  
+@media ( max-width: 430px )
+  .about
+    height: 900px
+    padding-top: 25px
+    &__block
+      &_left
+        width: 100%
+    &-image
+      width: 213px
+      height: 265px

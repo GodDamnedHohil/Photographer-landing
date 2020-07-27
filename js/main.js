@@ -64,6 +64,10 @@ document.addEventListener('DOMContentLoaded', function(){
   }
 
   sliderBtn.addEventListener('click', function() {
+    changeSlide();
+  })
+
+  function changeSlide() {
     if(btnCircleTop.classList.contains('circle_big')) {
       btnCircleTop.classList.remove('circle_big');
       btnCircleTop.classList.toggle('circle_small');
@@ -79,5 +83,5 @@ document.addEventListener('DOMContentLoaded', function(){
       heroTitle.innerText = 'Photographer';
       header.classList.remove('header_sec')
     }
-  })
+  }
 })
