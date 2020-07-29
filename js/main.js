@@ -14,8 +14,11 @@ document.addEventListener('DOMContentLoaded', function(){
   const sliderBtn = document.querySelector('.slider-btn');
   const btnCircleTop = document.querySelector('.circle_top');
   const btnCircleBottom = document.querySelector('.circle_bottom');
+  const servicesLink = document.querySelectorAll('.services__link');
+  const gridItem = document.querySelectorAll('.services-grid__item');
 
-  menuBtn.addEventListener('click', function() {
+  function showSidebar() {
+    sidebar.style.transform = 'translateX(0)';
     sidebarIconBig.classList.toggle('driveInTop');
     sidebarIconBig.classList.remove('fadeOutTop');
     sideNav.classList.toggle('popInBottom');
@@ -24,14 +27,10 @@ document.addEventListener('DOMContentLoaded', function(){
     sideTitle.classList.remove('popOutLeft');
     sidebar.classList.toggle('swoopInLeft');
     sidebar.classList.remove('swoopOutLeft');
-    sidebar.style.transform = 'translateX(0)';
-    menuBtn.classList.toggle('fold');
-    menuBtn.classList.remove('pullRight');
-    menuBtn.style.transform = 'translateX(100px)';
-    navbar.classList.toggle('navbar_sticky_transp')
-  })
+  }
 
-  closeSidebarBtn.addEventListener('click', function() {
+  function hideSidebar() {
+    sidebar.style.transform = 'translateX(-120%)';
     sidebarIconBig.classList.toggle('fadeOutTop');
     sidebarIconBig.classList.remove('driveInTop');
     sideNav.classList.toggle('fadeOutBottom');
@@ -40,14 +39,19 @@ document.addEventListener('DOMContentLoaded', function(){
     sideTitle.classList.remove('popInRight');
     sidebar.classList.toggle('swoopOutLeft');
     sidebar.classList.remove('swoopInLeft');
-    sidebar.style.transform = 'translateX(-120%)';
+  }
+
+  function showMenuBtn() {
     menuBtn.classList.remove('fold');
     menuBtn.classList.toggle('pullRight');
     menuBtn.style.transform = 'translateX(0)';
-    navbar.classList.remove('navbar_sticky_transp');
-  })
+  }
 
-  window.onscroll = function() { pinNavbar() };
+  function hideMenuBtn() {
+    menuBtn.style.transform = 'translateX(100px)';
+    menuBtn.classList.toggle('fold');
+    menuBtn.classList.remove('pullRight');
+  }
 
   function pinNavbar() {
     if (window.pageYOffset > document.querySelector('.navbar-logo').offsetTop) {
@@ -62,10 +66,6 @@ document.addEventListener('DOMContentLoaded', function(){
       menuBtn.classList.remove("menu-icon_sticky");
     }
   }
-
-  sliderBtn.addEventListener('click', function() {
-    changeSlide();
-  })
 
   function changeSlide() {
     if(btnCircleTop.classList.contains('circle_big')) {
@@ -84,4 +84,27 @@ document.addEventListener('DOMContentLoaded', function(){
       header.classList.remove('header_sec')
     }
   }
+
+  function animateLink () {
+    servicesLink.this.classList.add('vivify');
+    servicesLink.this.classList.add('popInLeft');
+  }
+
+  window.onscroll = function() { pinNavbar() };
+
+  menuBtn.addEventListener('click', function() {
+    showSidebar();
+    hideMenuBtn();
+    navbar.classList.toggle('navbar_sticky_transp')
+  })
+
+  closeSidebarBtn.addEventListener('click', function() {
+    hideSidebar();
+    showMenuBtn();
+    navbar.classList.remove('navbar_sticky_transp');
+  })
+
+  sliderBtn.addEventListener('click', function() {
+    changeSlide();
+  })
 })

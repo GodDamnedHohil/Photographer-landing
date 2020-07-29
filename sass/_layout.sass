@@ -37,6 +37,10 @@ svg rect
     +medium
     font-size: 48px
     color: black
+  &_small
+    +regular
+    font-size: 22px
+    color: $black
   &_extra-bold
     +medium
     font-size: 60px
@@ -48,9 +52,11 @@ svg rect
   &__border
     width: inherit
     height: 100%
-  @media screen and ( max-width: 1140px )
+  @media  ( max-width: 1140px )
     &_big
       font-size: 40px
+
+   
 
 .description
   +regular  
@@ -60,6 +66,8 @@ svg rect
     font-size: 16px
   &_small
     font-size: 14px
+    @media (max-width: 1140px)
+      font-size: 12px
   @media screen and ( max-width: 1140px )
     &_big
       font-size: 14px
@@ -71,6 +79,12 @@ svg rect
   border-bottom: 1px solid transparent
   color: $black
   -webkit-tap-highlight-color: transparent
+  &_sec
+    +regular
+    font-size: 14px
+    text-decoration: none
+    color: $black
+
   @media ( max-width: 1140px )
     font-size: 14px
 
@@ -93,8 +107,11 @@ svg rect
 
 @media screen and ( max-width: 500px )
   .section-title
-    &_extra, &_extra-bold
+    font-size: 28px
+    &_extra, &_extra-bold, &_big
       font-size: 30px
+    &_small
+      font-size: 18px
   svg rect 
     stroke-dasharray: 40, 300
 
