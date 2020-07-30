@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', function(){
+document.addEventListener('DOMContentLoaded', () => {
 
   const header = document.querySelector('.header');
   const navbar = document.querySelector('.navbar');
@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function(){
   const btnCircleTop = document.querySelector('.circle_top');
   const btnCircleBottom = document.querySelector('.circle_bottom');
   const servicesLink = document.querySelectorAll('.services__link');
-  const gridItem = document.querySelectorAll('.services-grid__item');
+  const portfolioGridItem = document.querySelectorAll('.portfolio-grid__item');
+  const portfolioGridInfo = document.querySelectorAll('.portfolio-grid__item-info-content');
 
   function showSidebar() {
     sidebar.style.transform = 'translateX(0)';
@@ -90,21 +91,37 @@ document.addEventListener('DOMContentLoaded', function(){
     servicesLink.this.classList.add('popInLeft');
   }
 
-  window.onscroll = function() { pinNavbar() };
+  window.onscroll = () =>  { pinNavbar() };
 
-  menuBtn.addEventListener('click', function() {
+  menuBtn.addEventListener('click', () =>  {
     showSidebar();
     hideMenuBtn();
     navbar.classList.toggle('navbar_sticky_transp')
-  })
+  });
 
-  closeSidebarBtn.addEventListener('click', function() {
+  closeSidebarBtn.addEventListener('click', () =>  {
     hideSidebar();
     showMenuBtn();
     navbar.classList.remove('navbar_sticky_transp');
-  })
+  });
 
-  sliderBtn.addEventListener('click', function() {
+  sliderBtn.addEventListener('click', () =>  {
     changeSlide();
+  });
+
+  portfolioGridInfo.forEach((item) => {
+    item.classList.add('hidden');
+  });
+
+  const showContent = () => {
+    portfolioGridInfo.forEach((item) => {
+      item.classList.toggle('hidden');
+    });
+  }
+
+  portfolioGridItem.forEach((item) => {
+    item.addEventListener('click', () => {
+      setTimeout(showContent, 1000);
+    }) 
   })
 })
