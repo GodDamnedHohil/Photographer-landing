@@ -937,6 +937,17 @@ svg rect {
   cursor: pointer;
 }
 
+.portfolio-grid__item:hover .portfolio-grid__item-info {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: .3s;
+}
+
+.portfolio-grid__item:hover .portfolio-grid__item-border {
+  opacity: 1;
+}
+
 .portfolio-grid__item:nth-child(1) {
   grid-row: 1/4;
   grid-column: 1/2;
@@ -979,9 +990,9 @@ svg rect {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
+  width: 50%;
+  height: 50%;
+  opacity: 0;
   margin: auto;
   background-color: rgba(255, 255, 255, 0.6);
   transition: .6s;
@@ -991,18 +1002,20 @@ svg rect {
   position: absolute;
   width: 23px;
   height: 23px;
+  z-index: 5;
+  opacity: 0;
 }
 
 .portfolio-grid__item-border_left {
-  top: 0;
-  left: 0;
+  top: 35px;
+  left: 25px;
   border-left: 1px solid #22222B;
   border-top: 1px solid #22222B;
 }
 
 .portfolio-grid__item-border_right {
-  right: 0;
-  bottom: 0;
+  right: 25px;
+  bottom: 35px;
   border-right: 1px solid #22222B;
   border-bottom: 1px solid #22222B;
 }
@@ -1075,6 +1088,14 @@ svg rect {
   }
   .portfolio-grid__item {
     padding: 0;
+  }
+  .portfolio-grid__item-border_left {
+    top: 0;
+    left: 0;
+  }
+  .portfolio-grid__item-border_right {
+    right: 0;
+    bottom: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
