@@ -109,19 +109,5 @@ document.addEventListener('DOMContentLoaded', () => {
     changeSlide();
   });
 
-  portfolioGridInfo.forEach((item) => {
-    item.classList.add('hidden');
-  });
-
-  const showContent = () => {
-    portfolioGridInfo.forEach((item) => {
-      item.classList.toggle('hidden');
-    });
-  }
-
-  portfolioGridItem.forEach((item) => {
-    item.addEventListener('click', () => {
-      setTimeout(showContent, 1000);
-    }) 
-  })
+  document.querySelector('.portfolio-grid__item-border_right').style.bottom = '0'
 })
