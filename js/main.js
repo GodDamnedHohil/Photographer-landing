@@ -109,5 +109,5 @@ document.addEventListener('DOMContentLoaded', () => {
     changeSlide();
   });
 
-  document.querySelector('.portfolio-grid__item-border_right').style.bottom = '0'
+  
 })
