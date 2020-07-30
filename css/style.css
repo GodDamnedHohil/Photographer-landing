@@ -1002,8 +1002,9 @@ svg rect {
   position: absolute;
   width: 23px;
   height: 23px;
-  z-index: 5;
+  z-index: 2;
   opacity: 0;
+  transition: .6s;
 }
 
 .portfolio-grid__item-border_left {
