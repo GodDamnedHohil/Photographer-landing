@@ -936,13 +936,6 @@ svg rect {
   cursor: pointer;
 }
 
-.portfolio-grid__item:hover .portfolio-grid__item-info {
-  opacity: 1;
-  width: 100%;
-  height: 100%;
-  transition: .3s;
-}
-
 .portfolio-grid__item:nth-child(1) {
   grid-row: 1/4;
   grid-column: 1/2;
@@ -985,9 +978,9 @@ svg rect {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50%;
-  height: 50%;
-  opacity: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
   margin: auto;
   background-color: rgba(255, 255, 255, 0.6);
   transition: .6s;
