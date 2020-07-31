@@ -1,0 +1,62 @@
+.feedback
+  height: 690px
+  width: 100%
+  padding-top: 120px
+  padding-bottom: 129px
+  &__inner
+    display: flex
+    flex-direction: column
+    align-items: center
+    height: 100%
+    width: 100%
+    margin: auto
+  &-title
+    margin: 0 0 16px 0
+    text-align: center
+    &__container
+      margin-bottom: 30px
+  &-subtitle
+    margin: 0
+    text-align: center
+  &-form
+    display: flex
+    flex-direction: column
+    align-items: center
+    &__input
+      height: 65px
+      width: 100%
+      padding-top: 14px
+      border: none
+      font-size: 14px
+      border-bottom: 1px solid $grey
+      text-align: center
+      outline: none
+      transition: .5s
+      &:focus
+        border-bottom: 1px solid #000000
+      &_comment
+        padding-top: 25px
+        height: 100px
+        margin-bottom: 37px
+    &-btn
+      max-width: 750px
+      width: 100%
+      height: 60px
+      color: #fff
+      background-color: $black
+      border: none
+      transition: .3s
+      cursor: pointer
+      &:hover
+        border: 1px solid $black
+        background-color: #ffffff
+        color: $black
+      &:active, &:focus
+        transition: .1s
+        border: none
+        background-color: #000000
+        color: #ffffff
+
+        
+
+        

@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const servicesLink = document.querySelectorAll('.services__link');
   const portfolioGridItem = document.querySelectorAll('.portfolio-grid__item');
   const portfolioGridInfoContent = document.querySelectorAll('.portfolio-grid__item-info-content');
+  const formBtn = document.querySelector('.feedback-form-btn');
 
   function showSidebar() {
     sidebar.style.transform = 'translateX(0)';
@@ -103,5 +104,16 @@ document.addEventListener('DOMContentLoaded', () => {
   sliderBtn.addEventListener('click', () =>  {
     changeSlide();
   });
+
+  formBtn.addEventListener('click', () => {
+    event.preventDefault();
+    document.querySelector('.feedback-title__container').classList.add('hidden');
+    document.querySelector('.feedback-form').classList.add('hidden');
+    document.querySelectorAll('.feedback-done').forEach((item) => {
+      item.classList.toggle('hidden');
+    })
+  })
+  
+  
 
 })

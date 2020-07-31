@@ -186,7 +186,7 @@ svg rect {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 @media screen and (max-width: 800px) {
@@ -1428,5 +1428,87 @@ svg rect {
   .stats-box-text {
     font-size: 12px;
   }
+}
+
+.feedback {
+  height: 690px;
+  width: 100%;
+  padding-top: 120px;
+  padding-bottom: 129px;
+}
+
+.feedback__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+}
+
+.feedback-title {
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+.feedback-title__container {
+  margin-bottom: 30px;
+}
+
+.feedback-subtitle {
+  margin: 0;
+  text-align: center;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.feedback-form__input {
+  height: 65px;
+  width: 100%;
+  padding-top: 14px;
+  border: none;
+  font-size: 14px;
+  border-bottom: 1px solid #7F7F82;
+  text-align: center;
+  outline: none;
+  transition: .5s;
+}
+
+.feedback-form__input:focus {
+  border-bottom: 1px solid #000000;
+}
+
+.feedback-form__input_comment {
+  padding-top: 25px;
+  height: 100px;
+  margin-bottom: 37px;
+}
+
+.feedback-form-btn {
+  max-width: 750px;
+  width: 100%;
+  height: 60px;
+  color: #fff;
+  background-color: #22222B;
+  border: none;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.feedback-form-btn:hover {
+  border: 1px solid #22222B;
+  background-color: #ffffff;
+  color: #22222B;
+}
+
+.feedback-form-btn:active, .feedback-form-btn:focus {
+  transition: .1s;
+  border: none;
+  background-color: #000000;
+  color: #ffffff;
 }
 /*# sourceMappingURL=style.css.map */
