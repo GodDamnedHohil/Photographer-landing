@@ -44,11 +44,12 @@
 
 @mixin regular {
   font-family: 'Roboto Regular', sans-serif;
-  font-weight: 400
+  font-weight: 400;
 }
 
 @mixin medium {
   font-family: 'Roboto Medium', sans-serif;
+  font-weight: 500;
 }
 
 @mixin italic {
