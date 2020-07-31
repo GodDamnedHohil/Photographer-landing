@@ -33,8 +33,17 @@
         height: 100%
         opacity: 1
         transition: .3s
+      &:hover &-info-content
+        display: block
       &:hover &-border
         opacity: 1
+        transition: .3s
+      &:hover &-border_left
+        top: 35px
+        left: 25px
+      &:hover &-border_right
+        bottom: 35px
+        right: 25px
       &:nth-child(1)
         grid-row: 1/4
         grid-column: 1/2
@@ -71,6 +80,8 @@
         margin: auto
         background-color: rgba(255, 255, 255, 0.6)
         transition: .6s
+        &-content
+          display: none
       &-border
         position: absolute
         width: 23px
@@ -79,13 +90,13 @@
         opacity: 0
         transition: .6s
         &_left
-          top: 35px
-          left: 25px
+          top: 0
+          left: 0
           border-left: 1px solid $black
           border-top: 1px solid $black
         &_right
-          right: 25px
-          bottom: 35px
+          right: 0
+          bottom: 0
           border-right: 1px solid $black
           border-bottom: 1px solid $black
       &-symbol
@@ -139,11 +150,12 @@
       height: 600px
       grid-gap: 10px
       &__item
-        padding: 0
+        padding: 10px 5px
         &-border
-          &_left
-            top: 0
-            left: 0
-          &_right
-            right: 0
-            bottom: 0
+          transition: .6s
+        &:hover &-border_left
+          top: 10px
+          left: 5px
+        &:hover &-border_right
+          bottom: 10px
+          right: 5px

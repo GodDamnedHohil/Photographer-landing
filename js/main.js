@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnCircleBottom = document.querySelector('.circle_bottom');
   const servicesLink = document.querySelectorAll('.services__link');
   const portfolioGridItem = document.querySelectorAll('.portfolio-grid__item');
-  const portfolioGridInfo = document.querySelectorAll('.portfolio-grid__item-info-content');
+  const portfolioGridInfoContent = document.querySelectorAll('.portfolio-grid__item-info-content');
 
   function showSidebar() {
     sidebar.style.transform = 'translateX(0)';
@@ -86,11 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  function animateLink () {
-    servicesLink.this.classList.add('vivify');
-    servicesLink.this.classList.add('popInLeft');
-  }
-
   window.onscroll = () =>  { pinNavbar() };
 
   menuBtn.addEventListener('click', () =>  {
@@ -109,5 +104,4 @@ document.addEventListener('DOMContentLoaded', () => {
     changeSlide();
   });
 
-  
 })

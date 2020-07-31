@@ -944,8 +944,23 @@ svg rect {
   transition: .3s;
 }
 
+.portfolio-grid__item:hover .portfolio-grid__item-info-content {
+  display: block;
+}
+
 .portfolio-grid__item:hover .portfolio-grid__item-border {
   opacity: 1;
+  transition: .3s;
+}
+
+.portfolio-grid__item:hover .portfolio-grid__item-border_left {
+  top: 35px;
+  left: 25px;
+}
+
+.portfolio-grid__item:hover .portfolio-grid__item-border_right {
+  bottom: 35px;
+  right: 25px;
 }
 
 .portfolio-grid__item:nth-child(1) {
@@ -998,6 +1013,10 @@ svg rect {
   transition: .6s;
 }
 
+.portfolio-grid__item-info-content {
+  display: none;
+}
+
 .portfolio-grid__item-border {
   position: absolute;
   width: 23px;
@@ -1008,15 +1027,15 @@ svg rect {
 }
 
 .portfolio-grid__item-border_left {
-  top: 35px;
-  left: 25px;
+  top: 0;
+  left: 0;
   border-left: 1px solid #22222B;
   border-top: 1px solid #22222B;
 }
 
 .portfolio-grid__item-border_right {
-  right: 25px;
-  bottom: 35px;
+  right: 0;
+  bottom: 0;
   border-right: 1px solid #22222B;
   border-bottom: 1px solid #22222B;
 }
@@ -1088,15 +1107,18 @@ svg rect {
     grid-gap: 10px;
   }
   .portfolio-grid__item {
-    padding: 0;
+    padding: 10px 5px;
   }
-  .portfolio-grid__item-border_left {
-    top: 0;
-    left: 0;
+  .portfolio-grid__item-border {
+    transition: .6s;
   }
-  .portfolio-grid__item-border_right {
-    right: 0;
-    bottom: 0;
+  .portfolio-grid__item:hover .portfolio-grid__item-border_left {
+    top: 10px;
+    left: 5px;
+  }
+  .portfolio-grid__item:hover .portfolio-grid__item-border_right {
+    bottom: 10px;
+    right: 5px;
   }
 }
 /*# sourceMappingURL=style.css.map */
