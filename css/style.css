@@ -957,7 +957,7 @@ svg rect {
   height: 100%;
   opacity: 1;
   transition: .3s;
-  z-index: 2;
+  z-index: 1;
 }
 
 .portfolio-grid__item:hover .portfolio-grid__item-info-content {
