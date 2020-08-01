@@ -1515,13 +1515,14 @@ svg rect {
 }
 
 .feedback-form__input:focus {
-  border-bottom: 1px solid #000000;
+  border-color: #000000;
 }
 
 .feedback-form__input_comment {
   padding-top: 25px;
   height: 100px;
   margin-bottom: 37px;
+  resize: none;
 }
 
 .feedback-form-btn {
