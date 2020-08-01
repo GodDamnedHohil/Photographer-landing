@@ -14,10 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const sliderBtn = document.querySelector('.slider-btn');
   const btnCircleTop = document.querySelector('.circle_top');
   const btnCircleBottom = document.querySelector('.circle_bottom');
-  const servicesLink = document.querySelectorAll('.services__link');
-  const portfolioGridItem = document.querySelectorAll('.portfolio-grid__item');
-  const portfolioGridInfoContent = document.querySelectorAll('.portfolio-grid__item-info-content');
+  const portfolioGridInfo = document.querySelectorAll('.portfolio-grid__item-info');
+  const galleryContainer = document.querySelector('.gallery__container');
+  const gallerySlide = document.querySelector('.gallery-slide')
+  const galleryClosebtn = document.querySelector('.gallery-close-btn');
+  const form = document.querySelector('.feedback-form');
   const formBtn = document.querySelector('.feedback-form-btn');
+  const feedbackDone = document.querySelectorAll('.feedback-done');
+  const feedbackTitleContainer = document.querySelector('.feedback-title__container'); 
+  const feedbackFormInput = document.querySelectorAll('.feedback-form__input');
 
   function showSidebar() {
     sidebar.style.transform = 'translateX(0)';
@@ -105,14 +110,32 @@ document.addEventListener('DOMContentLoaded', () => {
     changeSlide();
   });
 
-  formBtn.addEventListener('click', () => {
-    event.preventDefault();
-    document.querySelector('.feedback-title__container').classList.add('hidden');
-    document.querySelector('.feedback-form').classList.add('hidden');
-    document.querySelectorAll('.feedback-done').forEach((item) => {
-      item.classList.toggle('hidden');
+  portfolioGridInfo.forEach((item, i) => {
+    item.addEventListener('click', () => {
+      galleryContainer.classList.remove('hidden');
+      gallerySlide.src = `img/portfolio-picture-${i+1}.jpeg`
     })
   })
+
+  galleryClosebtn.addEventListener('click', () => {
+    galleryContainer.classList.add('hidden');
+  })
+
+  console.log(feedbackFormInput);
+  formBtn.addEventListener('click', () => {
+    if(feedbackFormInput[0].value.length != 0 && feedbackFormInput[1].value.length != 0 && feedbackFormInput[2].value.length != 0) {
+      event.preventDefault();
+      feedbackTitleContainer.classList.add('hidden');
+      form.classList.add('hidden');
+      feedbackDone.forEach((item) => {
+      item.classList.toggle('hidden');
+    })
+    }
+    
+  })
+
+
+
   
   
 
