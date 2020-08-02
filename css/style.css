@@ -364,8 +364,8 @@ svg rect {
 }
 
 .sidebar-icon_big {
-  width: 240px;
-  height: 240px;
+  width: 160px;
+  height: 160px;
   margin: 0 auto;
 }
 
@@ -383,7 +383,7 @@ svg rect {
 
 .sidebar-nav__link {
   position: relative;
-  font-size: 20px;
+  font-size: 16px;
   padding: 3px 0;
   margin-bottom: 8px;
   transition: .3s;
@@ -462,7 +462,7 @@ svg rect {
 
 @media (max-width: 800px) {
   .header {
-    height: 100vh;
+    height: 100%;
   }
   .hero {
     height: calc( 100vh - 80px);
