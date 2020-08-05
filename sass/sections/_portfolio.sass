@@ -48,27 +48,27 @@
       &:nth-child(1)
         grid-row: 1/4
         grid-column: 1/2
-        background-image: url(../img/portfolio-picture-1.jpeg)
+        background-image: url(../img/portfolio-picture-1-min.jpg)
       &:nth-child(2)
         grid-row: 1/5
         grid-column: 2/3
-        background-image: url(../img/portfolio-picture-2.jpeg)
+        background-image: url(../img/portfolio-picture-2-min.jpg)
       &:nth-child(3)
         grid-row: 1/4
         grid-column: 3/4
-        background-image: url(../img/portfolio-picture-3.jpeg)
+        background-image: url(../img/portfolio-picture-3-min.jpg)
       &:nth-child(4)
         grid-row: 4/8
         grid-column: 1/2  
-        background-image: url(../img/portfolio-picture-4.jpeg)
+        background-image: url(../img/portfolio-picture-4-min.jpg)
       &:nth-child(5)
         grid-row: 5/8
         grid-column: 2/3
-        background-image: url(../img/portfolio-picture-5.jpeg)
+        background-image: url(../img/portfolio-picture-5-min.jpg)
       &:nth-child(6)
         grid-row: 4/8
         grid-column: 3/4  
-        background-image: url(../img/portfolio-picture-6.jpeg)
+        background-image: url(../img/portfolio-picture-6-min.jpg)
       &-info
         position: relative
         display: flex
@@ -144,6 +144,22 @@
     transition: .4s
     &:hover
       color: #ccc8c8
+
+@media ( min-width: 2000px )
+  .portfolio
+    height: 1600px
+    &-grid
+      height: 1100px
+      &__item
+        &-symbol
+          width: 40px
+          height: 40px
+        &-title
+          font-size: 32px
+        &-border
+          width: 40px
+          height: 40px
+  
 
 @media (max-width: 1140px)
   .portfolio

@@ -113,30 +113,25 @@ document.addEventListener('DOMContentLoaded', () => {
   portfolioGridInfo.forEach((item, i) => {
     item.addEventListener('click', () => {
       galleryContainer.classList.remove('hidden');
-      gallerySlide.src = `img/portfolio-picture-${i+1}.jpeg`
+      gallerySlide.src = `img/portfolio-picture-${i+1}.jpg`;
+      document.body.style.overflow = 'hidden';
     })
   })
 
   galleryClosebtn.addEventListener('click', () => {
     galleryContainer.classList.add('hidden');
+    document.body.style.overflow = 'scroll';
   })
 
-  console.log(feedbackFormInput);
   formBtn.addEventListener('click', () => {
     if(feedbackFormInput[0].value.length != 0 && feedbackFormInput[1].value.length != 0 && feedbackFormInput[2].value.length != 0) {
       event.preventDefault();
       feedbackTitleContainer.classList.add('hidden');
       form.classList.add('hidden');
       feedbackDone.forEach((item) => {
-      item.classList.toggle('hidden');
-    })
+        item.classList.toggle('hidden');
+      })
     }
     
   })
-
-
-
-  
-  
-
 })

@@ -43,12 +43,12 @@
       height: 80px
       margin-right: 19px
       border-radius: 50%
-      background-size: auto auto
+      background-size: cover
       &_left
-        background-image: url('../img/testimonials-1.jpeg')
+        background-image: url('../img/reviewer-1.jpg')
         background-position: 0 39%
       &_right
-        background-image: url('../img/testimonials-2.jpeg')
+        background-image: url('../img/reviewer-2.jpg')
         background-position: 37% 5%
     &-text
       &__container
@@ -68,7 +68,22 @@
     left: 30px
     width: 40px
     height: 40px
-      
+
+@media ( min-width: 2000px )
+  .testimonials
+    height: 900px 
+    &-reviewer
+      &-img
+        width: 100px
+        height: 100px
+      &__container
+        height: 100px
+      &-text
+        &__container
+          height: 75px
+        &_small
+          font-size: 18px
+
 @media ( max-width: 1170px )
   .testimonials
     &-grid

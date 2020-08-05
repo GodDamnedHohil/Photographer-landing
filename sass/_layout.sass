@@ -16,10 +16,14 @@ svg rect
   transition: 0.8s
   stroke-dasharray: 50, 600
   stroke-dashoffset: 20
-
+  @media screen and ( min-width: 2000px )
+    stroke-width: 2
+    stroke-dasharray: 70 745px
 
 .container
   max-width: 1170px
+  @media ( min-width: 1921px )
+    max-width: calc( 100% - 750px )
   @media  ( max-width: 1170px )
     padding: 0 15px
   
@@ -27,6 +31,9 @@ svg rect
 .logo
   width: 188px
   height: 43px
+  @media ( min-width: 2000px )
+    width: 225px
+    height: 60px
 
 .section-title
   +regular
@@ -52,6 +59,16 @@ svg rect
   &__border
     width: inherit
     height: 100%
+  @media ( min-width: 2000px )
+    font-size: 48px
+    &_big
+      font-size: 60px
+    &_small
+      font-size: 44px
+    &_extra-bold
+      font-size: 72px
+    &_extra
+      font-size: 72px
   @media  ( max-width: 1140px )
     &_big
       font-size: 40px
@@ -70,6 +87,13 @@ svg rect
     color: $grey
     font-size: 18px
     +italic
+  @media screen and ( min-width: 2000px )
+    &_big
+      font-size: 22px
+    &_small
+      font-size: 20px
+    &_cursive
+      font-size: 26px
   @media screen and ( max-width: 1140px )
     &_big
       font-size: 14px
@@ -90,18 +114,26 @@ svg rect
     font-size: 14px
     text-decoration: none
     color: $black
+  @media ( min-width: 2000px )
+    font-size: 24px
+    &_sec
+      font-size: 22px
   @media ( max-width: 1140px )
     font-size: 14px
 
 .label
   +medium
   font-size: 16px    
+  @media ( min-width: 2000px )
+    font-size: 24px
 
 .btn
   +regular
   font-size: 16px
   text-decoration: none
   text-align: center
+  @media ( min-width: 2000px )
+    font-size: 22px
 
 .hidden
   display: none !important
