@@ -1,6 +1,7 @@
 .about
   height: 830px
   width: 100%
+  overflow: hidden
   @media (min-width: 2000px)
     height: 1100px
   &__inner
@@ -28,14 +29,17 @@
     position: absolute
     width: 376px
     height: 465px
+    transition: .8s
     &__wrap
       position: relative
       width: 100%
       height: 100%
+      overflow: hidden
     &__label
       display: inline-block
       position: absolute
-      bottom: 59px
+      bottom: -200px
+      opacity: 0
       left: 14px
       writing-mode: tb-rl
       +medium 
@@ -44,6 +48,7 @@
       word-spacing: -2px
       letter-spacing: 2px
       transform: rotate(180deg)
+      transition: 1s
       &::after
         position: absolute
         content: ''
@@ -52,6 +57,10 @@
         top: 105px
         left: 8px
         background-color: #000000
+    &__label.active
+      bottom: 59px
+      opacity: 1
+
     &_back
       top: 0
       left: 0
@@ -59,12 +68,18 @@
       background-size: auto auto
       background-position: 87% 4%
       opacity: .7
+      transform: translateY(-100%)
+    &_back.active
+      transform: translateY(0)
     &_front
       bottom: 0
       right: 0
       background-image: url('../img/photographer.jpeg')
       background-size: cover
       background-position: left 73%
+      transform: translateY(100%)
+    &_front.active
+      transform: translateY(0)
     @media ( min-width: 2000px )
       width: 488px
       height: 600px
@@ -76,35 +91,27 @@
         &::after
           height: 75px
           top: 160px
-          
   &-title
     margin-bottom: 0
+    transform: translateX(100%)
+    transition: .6s
+    opacity: 0
   &-description
+    transform: translateX(100%)
     max-width: 530px
     margin-bottom: 47px
-
+    transition: .8s
+    opacity: 0
+  &-title.active, &-description.active
+    transform: translateX(0)
+    opacity: 1
 .progress
   position: relative
   height: 40px
-  &:nth-child(2) .progress__line
-    &::after
-      position: absolute
-      content: ''
-      top: 0
-      right: 0
-      height: 2px
-      width: 35%
-      background-color: #f2f2f2
-  &:nth-child(3) .progress__line
-    &::after
-      position: absolute
-      content: ''
-      top: 0
-      right: 0
-      height: 2px
-      width: 20%
-      background-color: #f2f2f2
-    
+  &:nth-child(2) .progress__line_black
+    max-width: 65%
+  &:nth-child(3) .progress__line_black
+    max-width: 80%
   &__container
     display: flex
     flex-direction: column
@@ -112,11 +119,19 @@
     height: 185px
   &__line
     position: absolute
-    right: 0
+    left: 0
     top: 0
-    width: 100%
+    width: 0
     height: 2px
     background-color: #000000
+    transition: 1s
+    z-index: 1
+    &_gray
+      width: 100% !important
+      background-color: #f2f2f2
+      z-index: 0
+  &__line.active
+    width: 100%
   &__circle
     position: absolute
     width: 12px

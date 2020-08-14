@@ -15,6 +15,8 @@
   <section class="header-section">
     <header>
       <div class="header">
+        <div class="header-bg header-bg_prim"></div>
+        <div class="header-bg header-bg_sec"></div>
         <!-- navbar -->
         <div class="navbar">
           <div class="container navbar__inner">
@@ -40,7 +42,7 @@
           <aside>
             <div class="sidebar">
               <div class="sidebar__inner">
-                <div class="sidebar-hide-btn"></div>
+                <div class="sidebar-hide-btn">&times;</div>
                 <img src="img/Menu-icon.png" alt="X" class="sidebar-icon_big vivify">
                 <!-- ^ icon ^ -->
                 <div class="sidebar-title__wrap">
@@ -65,16 +67,14 @@
         <!-- ^ sidebar ^ -->
         <!-- hero -->
         <div class="container hero">
-          <div class="hero-title__wrap">
-            <h1 class="section-title_extra">I Am <span id="hero-title" class="section-title_extra-bold">Photographer</span></h1>
+          <div style="overflow: hidden;" class="hero-title__wrap anim-content">
+            <div class="hero-title__border hero-title__border_left"></div>
+            <h1 class="section-title_extra hero-title anim-content">I Am <span id="hero-title" class="section-title_extra-bold">Photographer</span></h1>
             <!-- ^ title ^ -->
-            <svg class="section-title__border" xmlns="http://www.w3.org/2000/svg">
-              <rect class="section-title__border" x='0' y='0' fill='none' width="inherit" height="100%"/>
-            </svg>
-            <!-- border-svg -->
+            <div class="hero-title__border hero-title__border_right"></div>
           </div>
           <div class="slider-btn__wrap">
-            <div class="slider-btn">
+            <div class="slider-btn anim-content">
               <div class="circle circle_top circle_big">
                 
               </div>
@@ -95,23 +95,24 @@
       <div class="container about__inner">
         <div class="about__block about__block_left">
           <div class="about-image__wrap">
-            <div class="about-image about-image_back"></div>
+            <div class="about-image about-image_back anim-content anim-no-hide"></div>
             <!-- ^ back-image ^ -->
-            <span class="about-image__label">Work Place</span>
-            <div class="about-image about-image_front"></div>
+            <span class="about-image__label anim-content anim-no-hide">Work Place</span>
+            <div class="about-image about-image_front anim-content anim-no-hide"></div>
             <!-- ^ photo ^ -->
           </div>
         </div>
         <div class="about__block about__block_right">
-          <h2 class="section-title_big about-title">About Me</h2>
+          <h2 class="section-title_big about-title anim-content anim-no-hide">About Me</h2>
           <!-- ^ title ^ -->
-          <p class="description description_big about-description">The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz  graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex!</p>
+          <p class="description description_big about-description anim-content anim-no-hide">The quick, brown fox jumps over a lazy dog. DJs flock by when MTV ax quiz prog. Junk MTV quiz  graced by fox whelps. Bawds jog, flick quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex!</p>
           <!-- ^ description ^ -->
           <!-- progress -->
           <div class="progress__container">
             <div class="progress">
               <div class="progress__circle"></div>
-              <div class="progress__line"></div>
+              <div class="progress__line anim-content anim-no-hide"></div>
+              <div class="progress__line progress__line_gray"></div>
               <!-- ^ lines ^ -->
               <span class="label progress__label">Adobe Photoshop</span>
               <!-- ^ label ^ -->
@@ -120,7 +121,8 @@
             </div>
             <div class="progress">
               <div class="progress__circle"></div>
-              <div class="progress__line"></div>
+              <div class="progress__line progress__line_black anim-content anim-no-hide"></div>
+              <div class="progress__line progress__line_gray"></div>
               <!-- ^ lines ^ -->
               <span class="label progress__label">Adobe Indesign</span>
               <!-- ^ label ^ -->
@@ -129,7 +131,8 @@
             </div>
             <div class="progress">
               <div class="progress__circle"></div>
-              <div class="progress__line"></div>
+              <div class="progress__line progress__line_black anim-content anim-no-hide"></div>
+              <div class="progress__line progress__line_gray"></div>
               <!-- ^ lines ^ -->
               <span class="label progress__label">Adobe XD</span>
               <!-- ^ label ^ -->
@@ -147,7 +150,7 @@
   <section class="services-section">
     <div class="services">
       <div class="container services__inner">
-        <div class="services-title__container">
+        <div class="services-title__container anim-content anim-no-hide">
           <h2 class="section-title services-title_main">My Services</h2>
           <!-- ^ title ^ -->
           <span class="description description_big services-description">Check out all my services and think what do you want</span>
@@ -156,7 +159,7 @@
         <!-- grid -->
         <div class="services-grid">
           <!-- element_1 -->
-          <div class="services-grid__item">
+          <div class="services-grid__item anim-content anim-no-hide">
             <img src="img/icon-1.svg" alt="" class="services-icon">
             <!-- ^ icon ^ -->
             <h3 class="section-title_small services-title_sec">Graphic Design</h3>
@@ -168,7 +171,7 @@
             <div class="line"></div>
           </div>
           <!-- element_2 -->
-          <div class="services-grid__item">
+          <div class="services-grid__item anim-content anim-no-hide">
             <img src="img/icon-2.svg" alt="" class="services-icon">
             <!-- ^ icon ^ -->
             <h3 class="section-title_small services-title_sec">Photography</h3>
@@ -180,7 +183,7 @@
             <div class="line"></div>
           </div>
           <!-- element_3 -->
-          <div class="services-grid__item">
+          <div class="services-grid__item anim-content anim-no-hide">
             <img src="img/icon-3.svg" alt="" class="services-icon">
             <!-- ^ icon ^ -->
             <h3 class="section-title_small services-title_sec">Web Design</h3>
@@ -192,7 +195,7 @@
             <div class="line"></div>
           </div>
           <!-- element_4 -->
-          <div class="services-grid__item">
+          <div class="services-grid__item anim-content anim-no-hide">
             <img src="img/icon-4.svg" alt="" class="services-icon">
             <!-- ^ icon ^ -->
             <h3 class="section-title_small services-title_sec">Social Media</h3>
@@ -204,7 +207,7 @@
             <div class="line"></div>
           </div>
           <!-- element_5 -->
-          <div class="services-grid__item">
+          <div class="services-grid__item anim-content anim-no-hide">
             <img src="img/icon-5.svg" alt="" class="services-icon">
             <!-- ^ icon ^ -->
             <h3 class="section-title_small services-title_sec">Marketing</h3>
@@ -216,7 +219,7 @@
             <div class="line"></div>
           </div>
           <!-- element_6 -->
-          <div class="services-grid__item">
+          <div class="services-grid__item anim-content anim-no-hide">
             <img src="img/icon-6.svg" alt="" class="services-icon">
             <!-- ^ icon ^ -->
             <h3 class="section-title_small services-title_sec">App Developing</h3>
@@ -237,7 +240,7 @@
   <section class="portfolio-section">
     <div class="portfolio">
       <div class="container portfolio__inner">
-        <div class="portfolio-title__container">
+        <div class="portfolio-title__container anim-content anim-no-hide">
           <h2 class="section-title portfolio-title">My Portfolio</h2>
           <!-- ^ title ^ -->
           <span class="description description_big portfolio-description">Here is all my work that i maked for some great people</span>
@@ -246,7 +249,7 @@
         <!-- grid -->
         <div class="portfolio-grid">
           <!-- item-1 -->
-          <div class="portfolio-grid__item">
+          <div class="portfolio-grid__item anim-content anim-no-hide">
             <div class="portfolio-grid__item-border portfolio-grid__item-border_left"></div>
             <div class="portfolio-grid__item-info">
               <img src="img/cross.svg" alt="+" class="portfolio-grid__item-symbol  portfolio-grid__item-info-content">
@@ -258,7 +261,7 @@
             <div class="portfolio-grid__item-border portfolio-grid__item-border_right"></div>
           </div>
           <!-- item-2 -->
-          <div class="portfolio-grid__item">
+          <div class="portfolio-grid__item anim-content anim-no-hide">
             <div class="portfolio-grid__item-border portfolio-grid__item-border_left"></div>
             <div class="portfolio-grid__item-info">
               <img src="img/cross.svg" alt="+" class="portfolio-grid__item-symbol portfolio-grid__item-info-content">
@@ -270,7 +273,7 @@
             <div class="portfolio-grid__item-border portfolio-grid__item-border_right"></div>
           </div>
           <!-- item-3 -->
-          <div class="portfolio-grid__item">
+          <div class="portfolio-grid__item anim-content anim-no-hide">
             <div class="portfolio-grid__item-border portfolio-grid__item-border_left"></div>
             <div class="portfolio-grid__item-info">
               <img src="img/cross.svg" alt="+" class="portfolio-grid__item-symbol portfolio-grid__item-info-content">
@@ -282,7 +285,7 @@
             <div class="portfolio-grid__item-border portfolio-grid__item-border_right"></div>
           </div>
           <!-- item-4 -->
-          <div class="portfolio-grid__item">
+          <div class="portfolio-grid__item anim-content anim-no-hide">
             <div class="portfolio-grid__item-border portfolio-grid__item-border_left"></div>
             <div class="portfolio-grid__item-info">
               <img src="img/cross.svg" alt="+" class="portfolio-grid__item-symbol portfolio-grid__item-info-content">
@@ -294,7 +297,7 @@
             <div class="portfolio-grid__item-border portfolio-grid__item-border_right"></div>
           </div>
           <!-- item-5 -->
-          <div class="portfolio-grid__item">
+          <div class="portfolio-grid__item anim-content anim-no-hide">
             <div class="portfolio-grid__item-border portfolio-grid__item-border_left"></div>
             <div class="portfolio-grid__item-info">
               <img src="img/cross.svg" alt="+" class="portfolio-grid__item-symbol portfolio-grid__item-info-content">
@@ -306,7 +309,7 @@
             <div class="portfolio-grid__item-border portfolio-grid__item-border_right"></div>
           </div>
           <!-- item-6 -->
-          <div class="portfolio-grid__item">
+          <div class="portfolio-grid__item anim-content anim-no-hide">
             <div class="portfolio-grid__item-border portfolio-grid__item-border_left"></div>
             <div class="portfolio-grid__item-info">
               <img src="img/cross.svg" alt="+" class="portfolio-grid__item-symbol portfolio-grid__item-info-content">
@@ -332,12 +335,14 @@
   <!-- freelance-offer -->
   <section class="freelance-offer-section">
     <div class="freelance-offer">
-      <div class="container freelance-offer__inner">
+      <div class="container freelance-offer__inner anim-content anim-no-hide">
         <h3 class="section-title section-title_small freelance-offer-title_small">Do you love my work?</h3>
         <!-- ^ subtitle ^ -->
         <h2 class="section-title section-title_big freelance-offer-title_big">Available For Freelance Work!</h2>
         <!-- ^ title ^ -->
-        <a href="" class="btn freelance-offer-btn">Hire Me</a>
+        <div class="freelance-offer-btn__container">
+          <a href="" class="btn freelance-offer-btn">Hire Me</a>
+        </div>
         <!-- ^ button ^ -->
       </div>
     </div>
@@ -347,7 +352,7 @@
   <section class="testimonials-section">
     <div class="testimonials">
       <div class="container testimonials__inner">
-        <div class="testimonials-title__container">
+        <div class="testimonials-title__container anim-content anim-no-hide">
           <h2 class="section-title testimonials-title">Testimonials</h2>
           <!-- ^ title ^ -->
           <h3 class="description description_big testimonials-subtitle">Lets check what people say about me and my work</h3>
@@ -355,12 +360,12 @@
         </div>
         <div class="testimonials-grid">
           <!--- reviewer-1 -->
-          <div class="testimonials-grid__item">
+          <div class="testimonials-grid__item anim-content anim-no-hide">
             <div class="testimonials-reviewer__container">
-              <div class="testimonials-reviewer-img testimonials-reviewer-img_left">
+              <div class="testimonials-reviewer-img testimonials-reviewer-img_left anim-content anim-no-hide">
                 <!-- ^ image ^ -->
               </div>
-              <div class="testimonials-reviewer-text__container">
+              <div class="testimonials-reviewer-text__container anim-content anim-no-hide">
                 <h3 class=" section-title_small testimonials-reviewer-text_big">Jonathon Lee</h3>
                 <!-- ^ name ^ -->
                 <span class="description testimonials-reviewer-text_small">UI/UX Designer</span>
@@ -374,12 +379,12 @@
             </div>
           </div>
           <!--- reviewer-2 -->
-          <div class="testimonials-grid__item">
+          <div class="testimonials-grid__item anim-content anim-no-hide">
             <div class="testimonials-reviewer__container">
-              <div class="testimonials-reviewer-img testimonials-reviewer-img_right">
+              <div class="testimonials-reviewer-img testimonials-reviewer-img_right anim-content anim-no-hide">
                 <!-- ^ image ^ -->
               </div>
-              <div class="testimonials-reviewer-text__container">
+              <div class="testimonials-reviewer-text__container anim-content anim-no-hide">
                 <h3 class="section-title_small testimonials-reviewer-text_big">Emalia Clark</h3>
                 <!-- ^ name ^ -->
                 <span class="description testimonials-reviewer-text_small">Frontend Dev</span>
@@ -402,7 +407,7 @@
     <div class="stats">
       <div class="container stats__inner">
         <div class="stats-box">
-          <div class="stats-box__item">
+          <div class="stats-box__item anim-content anim-no-hide">
             <div class="stats-box-logo__container">
               <img src="img/stats-icon-1.png" alt="" class="stats-box-logo">
             </div>
@@ -412,7 +417,7 @@
             <span class="description description_big stats-box-text">Happy Customers</span>
             <!-- ^ text ^ -->
           </div>
-          <div class="stats-box__item">
+          <div class="stats-box__item anim-content anim-no-hide">
             <div class="stats-box-logo__container">
               <img src="img/stats-icon-2.png" alt="" class="stats-box-logo">
             </div>
@@ -422,7 +427,7 @@
             <span class="description description_big stats-box-text">Completed Project</span>
             <!-- ^ text ^ -->
           </div>
-          <div class="stats-box__item">
+          <div class="stats-box__item anim-content anim-no-hide">
             <div class="stats-box-logo__container">
               <img src="img/stats-icon-3.png" alt="" class="stats-box-logo">
             </div>
@@ -432,7 +437,7 @@
             <span class="description description_big stats-box-text">Years Experience</span>
             <!-- ^ text ^ -->
           </div>
-          <div class="stats-box__item">
+          <div class="stats-box__item anim-content anim-no-hide">
             <div class="stats-box-logo__container">
               <img src="img/stats-icon-4.png" alt="" class="stats-box-logo">
             </div>
@@ -451,21 +456,23 @@
   <section class="feedback-section">
     <div class="feedback">
       <div class="container feedback__inner">
-        <div class="feedback-title__container">
+        <div class="feedback-title__container anim-content anim-no-hide">
           <h2 class="section-title feedback-title">Get in Touch</h2>
           <!-- ^ title ^ -->
           <h3 class="description description_big feedback-subtitle">Have you any question? Send me message without hesitated</h3>
           <!-- title -->
         </div>
         <!-- form -->
-        <form id="feedback-form" action="#" class="feedback-form">
+        <form id="feedback-form" action="#" class="feedback-form anim-content anim-no-hide">
           <input type="text" class="description description_small feedback-form__input" placeholder="Your Full Name" required>
           <!-- ^ name ^ -->
           <input type="email" class="description description_small feedback-form__input" placeholder="Email Address" required>
           <!-- ^ email ^ -->
           <textarea cols="30" rows="10" class="description description_small feedback-form__input feedback-form__input_comment" placeholder="Your Message" required></textarea>
           <!-- ^ comment ^ -->
-          <input type="submit" class="btn feedback-form-btn" value="Send Message">
+          <div class="feedback-form-btn__container anim-content anim-no-hide">
+            <input type="submit" class="btn feedback-form-btn" value="Send Message">
+          </div>
           <!-- ^ button ^ -->
         </form>
         <!-- after submit -->

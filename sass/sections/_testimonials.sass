@@ -5,6 +5,7 @@
     width: 100%
     height: 100%
     margin: 0 auto
+    overflow: hidden
     padding-top: 122px
   &-title
     margin: 0 0 16px 0
@@ -14,6 +15,17 @@
       align-items: center
       width: 100%
       margin-bottom: 60px
+    &__container h2
+      transform: translateX(100px)
+      opacity: 0
+      transition: 1s
+    &__container h3
+      transform: translateX(-100px)
+      opacity: 0
+      transition: 1s
+    &__container.active h3, &__container.active h2
+      transform: translateX(0)
+      opacity: 1
   &-subtitle
     margin: 0
     text-align: center
@@ -23,7 +35,7 @@
     &__container
       position: relative
       padding-left: 30px
-      padding-right: 10px
+      padding-right: 10px    
   &-grid
     display: grid
     grid-template-rows: 1fr
@@ -31,6 +43,22 @@
     grid-gap: 30px
     height: 275px
     width: 100%
+    &__item:first-child .testimonials-text__container
+      transform: translate(-50%, -100%) scale(0)
+      opacity: 0
+      transition: 1s
+    &__item:last-child .testimonials-text__container
+      transform: translate(-50%, -100%) scale(0)
+      opacity: 0
+      transition: 1s
+      transition-delay: .5s
+    &__item:last-child .testimonials-reviewer-text__container h3, &__item:last-child .testimonials-reviewer-text__container span
+      transition-delay: .5s
+    &__item.active .testimonials-text__container
+      transform: translate(0) scale(1)
+      opacity: 1
+    
+      
   &-reviewer
     &__container
       display: flex
@@ -44,12 +72,19 @@
       margin-right: 19px
       border-radius: 50%
       background-size: cover
+      transform: scale(0)
+      transition: 1s
+      opacity: 0
       &_left
         background-image: url('../img/reviewer-1.jpg')
         background-position: 0 39%
       &_right
         background-image: url('../img/reviewer-2.jpg')
         background-position: 37% 5%
+        transition-delay: .5s
+    &-img.active
+      opacity: 1
+      transform: scale(1)
     &-text
       &__container
         position: relative
@@ -57,11 +92,19 @@
         flex-direction: column
         justify-content: space-between
         height: 50px
+      &__container h3, &__container span
+        transform: translateX(100%)
+        opacity: 0
+      &__container.active h3, &__container.active span
+        transform: translateX(0)
+        opacity: 1
       &_big
         margin: 0
+        transition: .8s
       &_small
         font-size: 12px
         margin: 0
+        transition: 1.4s
   &-decor-logo
     position: absolute
     top: -7px

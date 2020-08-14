@@ -11,6 +11,21 @@
     width: 100%
     padding: 100px 15px
     margin: 0 auto
+  &__inner h2, &__inner h3 
+    transform: translateY(-100%)
+    opacity: 0
+    transition: 1s
+  &__inner div
+    transform: scale(0)
+    transition: 1s
+    opacity: 0
+  &__inner.active div  
+    transform: scale(1)
+    opacity: 1
+  &__inner.active h2, &__inner.active h3,
+    transform: translateX(0)
+    opacity: 1
+
   &-title_big,&-title_small
     margin: 0
     color: #fff

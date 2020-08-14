@@ -1,14 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
 
-  const header = document.querySelector('.header');
+  const headerBg = document.querySelectorAll('.header-bg');
   const navbar = document.querySelector('.navbar');
   const navbarLogo = document.querySelector('.navbar-logo');
   const menuBtn = document.querySelector('.menu-icon')
   const closeSidebarBtn = document.querySelector('.sidebar-hide-btn');
   const sidebar = document.querySelector('.sidebar');
   const sidebarIconBig = document.querySelector('.sidebar-icon_big');
-  const sideNav = document.querySelector('.sidebar-nav');
-  const sideTitle = document.querySelector('.sidebar-title');
   const hero = document.querySelector('.hero');
   const heroTitle = document.querySelector('#hero-title');
   const sliderBtn = document.querySelector('.slider-btn');
@@ -23,29 +21,20 @@ document.addEventListener('DOMContentLoaded', () => {
   const feedbackDone = document.querySelectorAll('.feedback-done');
   const feedbackTitleContainer = document.querySelector('.feedback-title__container'); 
   const feedbackFormInput = document.querySelectorAll('.feedback-form__input');
+  const animContent = document.querySelectorAll('.anim-content');
+
+  let sliderBtnLock = true;
 
   function showSidebar() {
     sidebar.style.transform = 'translateX(0)';
     sidebarIconBig.classList.toggle('driveInTop');
     sidebarIconBig.classList.remove('fadeOutTop');
-    sideNav.classList.toggle('popInBottom');
-    sideNav.classList.remove('fadeOutBottom');
-    sideTitle.classList.toggle('popInRight');
-    sideTitle.classList.remove('popOutLeft');
-    sidebar.classList.toggle('swoopInLeft');
-    sidebar.classList.remove('swoopOutLeft');
   }
 
   function hideSidebar() {
     sidebar.style.transform = 'translateX(-120%)';
     sidebarIconBig.classList.toggle('fadeOutTop');
     sidebarIconBig.classList.remove('driveInTop');
-    sideNav.classList.toggle('fadeOutBottom');
-    sideNav.classList.remove('popInBottom');
-    sideTitle.classList.toggle('popOutLeft');
-    sideTitle.classList.remove('popInRight');
-    sidebar.classList.toggle('swoopOutLeft');
-    sidebar.classList.remove('swoopInLeft');
   }
 
   function showMenuBtn() {
@@ -74,25 +63,76 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  function unlockSliderBtn () {
+    sliderBtnLock = true;
+  }
+
+  function changeText() {
+    if(btnCircleTop.classList.contains('circle_big')) {
+      heroTitle.innerText = 'Photographer';
+    } else {
+      heroTitle.innerText = 'Designer';
+    }
+  }
+
+  function animateSlide() {
+    animContent[0].classList.add('active');
+  }
+
   function changeSlide() {
     if(btnCircleTop.classList.contains('circle_big')) {
       btnCircleTop.classList.remove('circle_big');
       btnCircleTop.classList.toggle('circle_small');
       btnCircleBottom.classList.toggle('circle_big');
       btnCircleBottom.classList.remove('circle_small');
-      heroTitle.innerText = 'Designer';
-      header.classList.add('header_sec')
+      headerBg[1].classList.add('active');
     } else {
       btnCircleBottom.classList.remove('circle_big');
       btnCircleBottom.classList.toggle('circle_small');
       btnCircleTop.classList.toggle('circle_big');
       btnCircleTop.classList.remove('circle_small');
-      heroTitle.innerText = 'Photographer';
-      header.classList.remove('header_sec')
+      headerBg[1].classList.remove('active')
+    }
+    animContent[0].classList.remove('active')
+    setTimeout(changeText, 500);
+    setTimeout(animateSlide, 500);
+  }
+  
+  
+
+  function getOffsetTop(elem) { 
+    const rect = elem.getBoundingClientRect(),
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return {
+      top: rect.top + scrollTop
+    };
+  
+  }
+
+  function animOnScroll (params) {
+    for (let i = 0; i < animContent.length; i++) {
+      const animItem = animContent[i];
+      const animItemHeight = animItem.offsetHeight;
+      const animItemOffset = getOffsetTop(animItem).top;
+      const animStartIndex = 10;
+
+      let animItemPoint = window.innerHeight - animItemHeight / animStartIndex;
+
+      if (animItemHeight > window.innerHeight) {
+        animItemPoint = window.innerHeight - window.innerHeight / animStartIndex;
+      }
+
+      if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+        animItem.classList.add('active');
+      } else {
+        if(!animItem.classList.contains('anim-no-hide')) animItem.classList.remove('active');
+      }
     }
   }
 
-  window.onscroll = () =>  { pinNavbar() };
+  setTimeout(animOnScroll(), 500);
+  
+  window.onscroll = () =>  { pinNavbar(), animOnScroll() };
 
   menuBtn.addEventListener('click', () =>  {
     showSidebar();
@@ -107,7 +147,12 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   sliderBtn.addEventListener('click', () =>  {
-    changeSlide();
+    if (sliderBtnLock) {
+      changeSlide();
+      sliderBtnLock = false;
+      setTimeout(unlockSliderBtn, 1000);
+    } 
+    
   });
 
   portfolioGridInfo.forEach((item, i) => {
