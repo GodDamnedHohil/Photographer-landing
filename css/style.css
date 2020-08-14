@@ -270,16 +270,10 @@ h1 {
 
 .header {
   position: relative;
-  height: 958px;
+  height: 100%;
   width: 100%;
   overflow: hidden;
   z-index: 2;
-}
-
-@media (min-width: 2000px) {
-  .header {
-    height: 1200px;
-  }
 }
 
 .header-bg {
